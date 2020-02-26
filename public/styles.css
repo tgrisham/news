@@ -1,0 +1,60 @@
+/* Typography */
+body {
+    /* Everything is Noto */
+    font-family: 'Noto', sans-serif;
+    margin-top: 65px;
+  }
+  /* Except we're using more specific rules to override the headlines */
+  .navbar-brand {
+    font-family: 'Anton';
+    font-size: 25px;
+  }
+
+
+  }
+  .navbar-dark .navbar-brand {
+    color: white;
+  }
+
+  .btn{
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .button {
+    border: white;
+    color: teal;
+    background-color: whitesmoke
+  }
+  
+  
+  
+  /* The background color of the "testimonials" part */
+  .testimonials {
+    background-color: #eeeeee;
+  }
+  
+
+  /* Navbar Icons */
+  .fa {
+    padding: 5px;
+  }
+
+.center {
+  block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.weather_section {
+margin-top: 40px;
+padding: 10px;
+}
+
+.forecast {
+text-align: center;
+}
+
+.paddy {
+    margin-top: 15px
+}

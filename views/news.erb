@@ -22,7 +22,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
         <a class="navbar-brand">
            Weather & News
@@ -31,21 +31,42 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="/"><i class="fa fa-search-location"></i> Search another City <span class="sr-only">(current)</span></a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container mt-5">
-      <h1>Select a Location</h1>
-    
-    
-     <form action="/news">
-        <label>Enter your City:</label>
-        <input type="text" name="location">
-        <button type="submit" class="btn btn-primary">Search</submit>
-    </form>
-    </div>
-    
+<div class="container weather_section mt-5">      
+<h1 class="display-4"> <i class= "fa fa-cloud-sun"></i> <%= @city_name %>'s 8 Day Weather Forecast </h1 >
+      <div class="forecast row">
+        <% for daily in @weather_array %>
+            <div class="paddy col-sm-3">
+                <%= daily %>
+            </div>
+        <% end %>
+      </div>
+      <p>
+        <a href="/" class="btn btn-primary">Search another City!</a>
+      </p>
+</div>
+
+<hr class="my-4">
+
+<div class="container mt-5">
+<h1 class="display-4"><i class= "fa fa-newspaper"></i> Today's Headlines </h1 class="display-4">
+    <% i=0 %>
+        <div class="row">
+            <% for article in @article_array %>
+                <div class="col-sm-12">
+                <li><a href="<%= @url_array[i] %>"> <%= article %> </a></li>
+                <% i = i+1 %>
+                 </div>
+            <% end %>
+        </div>
+</div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
